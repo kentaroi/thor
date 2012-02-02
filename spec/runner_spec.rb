@@ -117,6 +117,10 @@ describe Thor::Runner do
   end
 
   describe "tasks" do
+    before(:all) do
+      Thor::Runner.start
+    end
+
     before(:each) do
       @location = "#{File.dirname(__FILE__)}/fixtures/task.thor"
       @original_yaml = {
